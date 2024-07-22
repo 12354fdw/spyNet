@@ -1,4 +1,4 @@
-rednet.wrap("top")
+rednet.open("top")
 
 local sx,sy,sz = gps.locate()
 
