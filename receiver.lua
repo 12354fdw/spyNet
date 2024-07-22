@@ -13,6 +13,8 @@ while true do
     local d = sqrt(dx^2,dy^2,dz^2)
     targets[tar].d = d
     for i,v in pairs(targets) do
+        term.clear()
+        term.setCursorPos(1,1)
         print(i.." pos: "..v.x..", "..v.y..", "..v.z)
         print(i.." dis: "..v.d)
     end
