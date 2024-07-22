@@ -5,7 +5,7 @@ rednet.open("back")
 function main()
     while true do
         local x,y,z = gps.locate()
-        rednet.broadcast(target,x,y,z)
+        rednet.broadcast({target,x,y,z})
         sleep(0.1)
     end
 end
