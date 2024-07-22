@@ -29,7 +29,6 @@ while true do
     term.setCursorPos(1,1)
     print("spyNet Command Center")
     for i,v in pairs(targets) do
-        print(i.." pos: "..v.x..", "..v.y..", "..v.z)
-        print(i.." dis: "..v.d)
+        print(i.." pos: "..v.x..", "..v.y..", "..v.z..", dist: "..v.d)
     end
 end
