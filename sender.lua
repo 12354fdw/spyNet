@@ -1,6 +1,6 @@
 local target = "NIL"
 
-rednet.wrap("back")
+rednet.open("back")
 
 function main()
     while true do
