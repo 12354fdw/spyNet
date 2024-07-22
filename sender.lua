@@ -1,5 +1,7 @@
 local target = "NIL"
 
+rednet.wrap("back")
+
 function main()
     while true do
         local x,y,z = gps.locate()
