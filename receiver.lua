@@ -15,20 +15,21 @@ while true do
     local x = data[2]
     local y = data[3]
     local z = data[4]
+    if tar then
+        if not targets[tar] then targets[tar] = {} end
 
-    if not targets[tar] then targets[tar] = {} end
+        targets[tar].x = x
+        targets[tar].y = y
+        targets[tar].z = z
 
-    targets[tar].x = x
-    targets[tar].y = y
-    targets[tar].z = z
-
-    local dx,dy,dz = sx-x,sy-y,sz-z
-    local d = sqrt(dx^2,dy^2,dz^2)
-    targets[tar].d = d
-    term.clear()
-    term.setCursorPos(1,1)
-    print("spyNet Command Center")
-    for i,v in pairs(targets) do
-        print(i.." pos: "..v.x..", "..v.y..", "..v.z..", dist: "..v.d)
+        local dx,dy,dz = sx-x,sy-y,sz-z
+        local d = sqrt(dx^2,dy^2,dz^2)
+        targets[tar].d = d
+        term.clear()
+        term.setCursorPos(1,1)
+        print("spyNet Command Center")
+        for i,v in pairs(targets) do
+            print(i.." pos: "..v.x..", "..v.y..", "..v.z..", dist: "..v.d)
+        end
     end
 end
