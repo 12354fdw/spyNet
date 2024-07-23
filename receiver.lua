@@ -23,7 +23,7 @@ while true do
         targets[tar].z = z
 
         local dx,dy,dz = sx-x,sy-y,sz-z
-        local d = sqrt(dx^2,dy^2,dz^2)
+        local d = math.sqrt(dx^2+dy^2+dz^2)
         targets[tar].d = d
         term.clear()
         term.setCursorPos(1,1)
